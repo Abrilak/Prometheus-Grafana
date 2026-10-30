@@ -6,3 +6,9 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
+  - job_name: 'My-PC'
+    static_configs:
+      - targets: ['192.168.12.210:9182']
+    labels:
+      host: 'my-pc'
+      os: 'windows'
